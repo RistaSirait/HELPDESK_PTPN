@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     libicu-dev \
     libpng-dev
 
-RUN docker-php-ext-install intl zip gd
+RUN docker-php-ext-install intl zip gd pdo pdo_mysql
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
