@@ -100,8 +100,9 @@ class LaporanForm extends Component implements HasForms
                             ->label('Upload Bukti Gambar (Opsional)')
                             ->multiple()
                             ->image()
+                            ->disk('public')
                             ->directory('laporan-gambar')
-                            ->maxSize(5120) // 5MB
+                            ->maxSize(5120)
                             ->columnSpanFull(),
                     ]),
             ])
