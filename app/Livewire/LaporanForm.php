@@ -98,9 +98,9 @@ class LaporanForm extends Component implements HasForms
                             ->columnSpanFull(),
                         Forms\Components\FileUpload::make('gambar')
                             ->label('Upload Bukti Gambar (Opsional)')
+                            ->disk('public')
                             ->multiple()
                             ->image()
-                            ->disk('public')
                             ->directory('laporan-gambar')
                             ->maxSize(5120)
                             ->columnSpanFull(),
