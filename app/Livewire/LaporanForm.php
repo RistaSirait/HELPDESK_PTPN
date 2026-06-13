@@ -35,7 +35,7 @@ class LaporanForm extends Component implements HasForms
                         Forms\Components\TextInput::make('nik')
                             ->label('NIK')
                             ->required()
-                            ->live(onBlur: true)
+                            ->live(debounce: 500)
                             ->afterStateUpdated(function ($state, Forms\Set $set) {
                                 if (!$state) return;
                                 $karyawan = MasterLapor::where('nik', $state)->first();
