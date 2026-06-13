@@ -43,6 +43,8 @@ class LaporanForm extends Component implements HasForms
                                     $set('nama_lengkap', $karyawan->nama);
                                     $set('email', $karyawan->email);
                                     $set('no_hp', $karyawan->no_hp);
+                                    $set('deskripsi_umum_masalah', 'Komputer tidak dapat terhubung ke jaringan');
+                                    $set('penjelasan_lengkap', 'Komputer menampilkan pesan tidak ada koneksi internet sehingga pekerjaan tidak dapat dilanjutkan.');
                                 }
                             })
                             ->exists('master_lapors', 'nik')
